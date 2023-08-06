@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="templates/CSS/register.css">
+  <style>
+    body {
+      background-image: url('Assets/Background.jpg'); /* Background image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100%;
+    }
+    .register-box {
+      background-color: #97979845;
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px; /* Increase width of the register box */
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    .register-heading {
+      text-align: center;
+      color: #ffffff;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .profile-pic-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .profile-pic-input {
+      display: none; /* Hide the file input field */
+    }
+  
+    /* Additional style for the "Click To Upload" text */
+    .profile-pic-container:hover .profile-pic {
+      opacity: 0.7; /* Reduce opacity on hover */
+    }
+  
+    .profile-pic-container:hover p {
+      display: block; /* Show the "Click To Upload" text on hover */
+    }
+  
+    .profile-pic-text {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      color: #ffffff;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #000000; /* Add red border */
+      cursor: pointer; /* Add pointer cursor on hover */
+    }
+
+    .form-check-input[type="radio"] {
+      width: 15px;
+      height: 15px;
+      /* Add default box-shadow for all radio buttons */
+    }
+
+    /* Add glow effect for the selected radio button */
+    .form-check-input[type="radio"]:checked {
+      box-shadow: 0 0 5px 2px #276cd9;
+    }
+    .profile-pic-input {
+      display: none; /* Hide the file input field */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container mt-5" id="Body">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="register-box">
+          <h4 class="register-heading">Register</h4>
+          <div class="profile-pic-container">
+            <label for="profilePicInput">
+              <img src="Assets/Profile_img.jpg" alt="Default Profile Pic" class="profile-pic" id="profilePic">
+              <p class="profile-pic-text">Click To Upload</p>
+            </label>
+            <input type="file" id="profilePicInput" class="profile-pic-input" accept="image/*">
+          </div>
+          <form method="POST" action="">
+           
+            <div class="d-flex flex-column">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="firstName" >First Name:</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name = 'fname' required data-validation-required-message = "Please enter your First Name" style="background-color: rgb(197, 248, 248);">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="lastName" >Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name = 'lname' required data-validation-required-message = "Please enter your Last Name" style="background-color: rgb(197, 248, 248);">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" >Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name = 'email' required data-validation-required-message = "Please enter your email address" style="background-color: rgb(197, 248, 248);">
+              </div>
+              <div class="form-group">
+                <label for="password" >Password:</label>
+                <input type="password" class="form-control" id="password" name = 'pwd' required data-validation-required-message = "Please enter your Password" placeholder="Enter password" style="background-color: rgb(197, 248, 248);">
+              </div>
+              <div class="form-group">
+                <label for="confirm_password" >Confirm Password:</label>
+                <input type="confirm_password" class="form-control" id="password" placeholder="Enter password" name = 'c_pwd' required data-validation-required-message= "Please confirm your password" style="background-color: rgb(197, 248, 248);">
+              </div>
+              <div class="form-group">
+                <label for="phone" >Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" name = 'phno' required data-validation-required-message = "Please enter your Phone No." style="background-color: rgb(197, 248, 248);">
+              </div>
+              <div class="form-group">
+                <label for="dob" >Date of Birth:</label>
+                <input type="date" class="form-control" id="dob" name = 'dob' required data-validation-required-message = "Please enter your Date of Birth" style="background-color: #c5f8f8;">
+              </div>
+              <div class="form-group">
+                <label for="gender" >Gender:</label>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="female" value=0>
+                      <label class="form-check-label" for="female" style="color: #c5f8f8;">
+                        Female
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4 d-flex justify-content-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="male" value=1>
+                      <label class="form-check-label" for="male" style="color: #c5f8f8;">
+                        Male
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4 d-flex justify-content-end">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="other" value=2>
+                      <label class="form-check-label" for="other" style="color: #c5f8f8;">
+                        Other
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="additionalInfo" >Additional Information:</label>
+                <textarea class="form-control" id="additionalInfo" rows="4" placeholder="Enter additional information" name = "info" style="background-color: rgb(197, 248, 248);"></textarea>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block mb-4" style="font-weight: bold;">Register</button>
+          </form>
+          <p class="text-center" >Already have an account? <a href="login.html">Login</a></p>
+        </div>
+        <div style="padding-top: 5%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+    const profilePic = document.getElementById("profilePic");
+    const profilePicInput = document.getElementById("profilePicInput");
+  
+    profilePicInput.addEventListener("change", function () {
+      const file = profilePicInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+  
+        reader.addEventListener("load", function () {
+          profilePic.setAttribute("src", reader.result);
+        });
+  
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

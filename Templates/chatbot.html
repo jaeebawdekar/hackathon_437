@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="static\chatbot.css">
+  
+ 
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed; width: 100%; z-index: 2; ">
+    <a class="navbar-brand" href="#" style="font-size: 28px; font-variant: small-caps;font-weight: bold;">
+      <img src="static\Assets\healthcare-app.png" alt="Healthpall Logo" width="30" height="30" class="mr-2">
+      HealthPal
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav" style="margin-left:48px;">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html#Home" style="font-size: 18px;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#Guidelines" style="font-size: 18px;">Guidelines</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="Chatbot.html" style="font-size: 18px;">Chatbot</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#AboutUs" style="font-size: 18px;">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ContactUs" style="font-size: 18px;">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown" style="margin-left: 0px;">
+          <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img src="static\Assets\profile.png" alt="Profile" width="30" height="30" class="mr-2">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="profile.html">Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="index_before_login.html">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="chatbot-container" style="background-image: url(static/Assets/Bot_Background.jpg);">
+
+
+    <div class="chatbot-card" style="background-color: rgba(161, 229, 212, 0.425); margin-top: 75px;">
+      <div class="chat">
+        <!-- Chat messages will be displayed here -->
+        <!-- Update the class name for user message container -->
+        <div>
+          
+        </div>
+        <div>
+          <div> </div>
+        </div>
+      </div>
+      <div class="input-container row">
+        <div class="input-container">
+          <input type="text" class="user-input form-control" style="background-color:white; margin-right: 5px;"
+            placeholder="Type your message...">
+          <button class="send-button btn btn-primary">Send</button>
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+            style="height: 43px; width: 70px; margin-left: 0.2%;">
+            End
+          </button>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Exit ChatBot</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to end the session?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            Yes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button trigger modal -->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">A Glimpse into Your Day</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          1] Have you practiced mindfulness or meditation today? <br>
+          <div class="form-check form-check-inline" style="margin-top: 1%;">
+            <input class="form-check-input" type="radio" name="question1" id="question1_yes" value="option1"
+              style="border-color: black;">
+            <label class="form-check-label" for="question1_yes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question1" id="question1_no" value="option2"
+              style="border-color: black;">
+            <label class="form-check-label" for="question1_no">No</label>
+          </div>
+        </div>
+        <div class="modal-body">
+          2] Did you take a break from work or studies today? <br>
+          <div class="form-check form-check-inline" style="margin-top: 1%;">
+            <input class="form-check-input" type="radio" name="question2" id="question2_yes" value="option3"
+              style="border-color: black;">
+            <label class="form-check-label" for="question2_yes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question2" id="question2_no" value="option4"
+              style="border-color: black;">
+            <label class="form-check-label" for="question2_no">No</label>
+          </div>
+        </div>
+        <div class="modal-body">
+          3] Have you done something kind for yourself today?<br>
+          <div class="form-check form-check-inline" style="margin-top: 1%;">
+            <input class="form-check-input" type="radio" name="question3" id="question3_yes" value="option1"
+              style="border-color: black;">
+            <label class="form-check-label" for="question3_yes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question3" id="question3_no" value="option2"
+              style="border-color: black;">
+            <label class="form-check-label" for="question3_no">No</label>
+          </div>
+        </div>
+        <div class="modal-body">
+          4] Did you encounter any self-defeating thoughts today? <br>
+          <div class="form-check form-check-inline" style="margin-top: 1%;">
+            <input class="form-check-input" type="radio" name="question4" id="question4_yes" value="option1"
+              style="border-color: black;">
+            <label class="form-check-label" for="question4_yes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question4" id="question4_no" value="option2"
+              style="border-color: black;">
+            <label class="form-check-label" for="question4_no">No</label>
+          </div>
+        </div>
+        <div class="modal-body">
+          5] Have you engaged in a hobby or something you enjoy today? <br>
+          <div class="form-check form-check-inline" style="margin-top: 1%;">
+            <input class="form-check-input" type="radio" name="question5" id="question5_yes" value="option1"
+              style="border-color: black;">
+            <label class="form-check-label" for="question5_yes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question5" id="question5_no" value="option2"
+              style="border-color: black;">
+            <label class="form-check-label" for="question5_no">No</label>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // JavaScript code to handle sending messages on Enter key press
+    const userInput = document.querySelector('.user-input');
+
+    // Function to send the message and receive bot's response
+    function sendMessage() {
+      const message = userInput.value.trim();
+      if (message !== '') {
+        appendMessage('user', message);
+        userInput.value = '';
+        const formData = new FormData();
+        formData.append('message', message);
+        fetch('/chatbot', {
+          method: 'POST',
+          body: formData
+        })
+          .then(response => response.json())
+          .then(data => {
+            // Append bot response to the chat container
+            appendMessage('bot', data.response);
+            if (data.referrer_url) {
+              
+              window.location.href = data.referrer_url;
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+      }
+    }
+  
+
+
+        
+
+    // Function to append the message to the chat
+    function appendMessage(sender, message) {
+      const chatContainer = document.querySelector('.chat');
+      const messageContainer = document.createElement('div');
+      // Update the class name for user message container
+      messageContainer.classList.add(sender === 'user' ? 'user-message-container' : 'message-container');
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('message', sender === 'user' ? 'user-message' : 'bot-message');
+      messageDiv.textContent = message;
+      messageContainer.appendChild(messageDiv);
+      chatContainer.appendChild(messageContainer);
+      chatContainer.scrollTop = chatContainer.scrollHeight; // Auto-scroll to the latest message
+    }
+
+   
+
+    // Event listener for Enter key press
+   
+
+    // Event listener for Send button click
+    document.querySelector('.send-button').addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', function (event) {
+      if (event.key === 'Enter') {
+        sendMessage();
+      }
+    });
+    function clearChat() {
+      const chatContainer = document.querySelector('.chat');
+      chatContainer.innerHTML = ''; // Remove all the chat messages
+    }
+
+    // Event listener for "Clear Chat" button click
+    document.querySelector('.clear-button').addEventListener('click', clearChat);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

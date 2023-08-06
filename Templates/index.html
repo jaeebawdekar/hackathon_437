@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthpal</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="static\index.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="100">
+
+
+  <div style="position: fixed; height: 500px; z-index: -1; ">
+    <img src="static\Assets\bg.jpg">
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed; width: 100%; z-index: 2; ">
+    <a class="navbar-brand" href="#" style="font-size: 28px; font-variant: small-caps;font-weight: bold;">
+      <img src="static\Assets\healthcare-app.png" alt="Logo" width="30" height="30" class="mr-2">
+      HealthPal
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav" style="margin-left:48px;">
+        <li class="nav-item">
+          <a class="nav-link" href="#Home" style="font-size: 18px;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Guidelines" style="font-size: 18px;">Guidelines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="chatbot" style="font-size: 18px;">Chatbot</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#AboutUs" style="font-size: 18px;">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ContactUs" style="font-size: 18px;">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown" style="margin-left: 0px;">
+          <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img src="static\Assets\profile.png" alt="Profile" width="30" height="30" class="mr-2">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="profile.html">Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="index.html">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <div id="Home" class="p-6 text-center bg-image rounded-3" style="
+    background-image: url('static\Assets\header_bg.jpg');
+    height: 700px; 
+  ">
+    <div class="mask">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white" style="margin-top: 300px; ">
+          <h1 class="mb-3" style="color: black; font-size: 60px;">Welcome To Healthpal</h1>
+          <h4 class="mb-3" style="color: black; font-size: 30px;">Your Personal Health Assistant</h4>
+          <a class="btn btn-outline-light btn-lg" href="chatbot.html" role="button" style="font-weight: bold;">Try
+            Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Guidelines -->
+  <div id="Guidelines" style="align-items: center; background-color: rgb(249, 255, 255); ">
+    <h1 id="guidelines" style="text-align: center; padding-top: 7%;">Guidelines</h1>
+    <div class="list-group list-group-light" style=" margin-left: 12%; margin-right: 12%; margin-top: 30px;">
+      <div style="display: flex; align-items:center;  ">
+        <img src="static\Assets\1.png" alt="" class="rounded-circle" style="height: 80px; width: 80px;">
+        <div id="first"
+          class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-primary"
+          style="margin-left: 1%;  box-shadow: 0 0 30px rgba(0,0,0,0.5);  overflow:hidden; border-radius: 15px; ">
+          <h5>Login / sign up</h5>
+          <a> To access HealthPal's personalized features, users must create an account and log in securely. This
+            ensures data privacy and enables us to deliver tailored health recommendations based on individual needs.
+          </a>
+        </div>
+      </div>
+      <div style="display: flex; align-items:center; margin-top: 5%;">
+        <div id="second"
+          class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-success"
+          style="box-shadow: 0 0 30px rgba(0,0,0,0.5);  overflow:hidden; border-radius: 15px;">
+          <div>
+            <h5>Start the session</h5>
+            <a>Upon login, users can initiate a session by entering their health-related questions or concerns.
+              HealthPal's AI-powered chatbot will analyze the input and provide relevant health insights. </a>
+          </div>
+        </div>
+        <img src="static\Assets\2.png" alt="" class="rounded-circle" style="height: 80px; width: 80px; margin-left: 1%;">
+      </div>
+      <div style="display: flex; align-items: center; margin-top: 5%;">
+        <img src="static\Assets\3.png" alt="" class="rounded-circle" style="height: 80px; width: 80px; ">
+        <div id="third"
+          class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-danger"
+          style="margin-left: 1%;box-shadow: 0 0 30px rgba(0,0,0,0.5); overflow:hidden; border-radius: 15px; ">
+          <h5>Track your progress</h5>
+          <a>HealthPal enables users to track their health progress over time. By recording health data and behaviors,
+            users can monitor their improvements and make informed decisions. </a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; margin-top: 5%;">
+        <div id="fourth"
+          class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-warning"
+          style="box-shadow: 0 0 30px rgba(0,0,0,0.5);  overflow:hidden; border-radius: 15px;">
+          <h5>Previous session</h5>
+          <a>Users can access their previous chat sessions, providing continuity and reference for ongoing health
+            discussions. This feature ensures a seamless and comprehensive health experience.</a>
+        </div>
+        <img src="static\Assets\4.png" alt="" class="rounded-circle" style="height: 80px; width: 80px; margin-left: 1%;">
+      </div>
+      <div style="display: flex; align-items: center; margin-top: 5%;">
+        <img src="static\Assets\5.png" alt="" class="rounded-circle" style="height: 80px; width: 80px;">
+        <div id="fifth" class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-info"
+          style="margin-left: 1%; box-shadow: 0 0 30px rgba(0,0,0,0.5);  overflow:hidden; border-radius: 15px; ">
+          <h5>Rewards</h5>
+          <a>As users actively engage with HealthPal and follow its recommendations, they earn rewards and incentives.
+            These rewards act as motivating factors, encouraging positive health habits and long-term commitment to
+            well-being.</a>
+        </div>
+      </div>
+      <div style="margin-top: 7%;"></div>
+    </div>
+  </div>
+
+  <!-- About Us -->
+
+  <div id="AboutUs" style="background-color: rgba(35, 235, 168, 0.106);">
+    <h1 style="text-align: center; padding-top: 7%;">About Us</h1>
+    <div class="card-group" style="margin-left: 12%; margin-right: 12%; margin-top: 3%; ">
+      <div class="card"
+        style="background-color: rgba(61, 241, 235, 0); box-shadow: 0 0 30px rgba(0,0,0,0.5);  overflow:hidden; border-radius: 15px; ">
+        <img class="card-img-top" src="static\Assets\miss.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Mission</h4>
+          <p class="card-text" style="font-weight: 500; ">At HealthPal, our mission is to positively impact lives
+            through
+            innovative and accessible
+            healthcare solutions. We strive to improve global quality of life by enhancing health outcomes with advanced
+            technology and compassionate care. Empowering individuals to take control of their well-being is our core
+            objective. Our dedicated team of experts delivers exceptional healthcare services tailored to diverse needs,
+            promoting healthier and happier lives.</p>
+        </div>
+      </div>
+      <div style="margin-left: 3%;"></div>
+      <div class="card"
+        style="background-color: rgba(240, 248, 255, 0); box-shadow: 0 0 30px rgba(0,0,0,0.5);  overflow:hidden; border-radius: 15px;">
+        <img class="card-img-top" src="static\Assets\Vision.png" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Vision</h4>
+          <p class="card-text" style="font-weight: 500;">At HealthPal, our vision is to create a healthier and more
+            connected world, with
+            personalized and accessible healthcare for all. We aim to lead in healthcare innovation, leveraging advanced
+            technologies and AI to transform the industry. Our goal is to empower individuals to take control of their
+            well-being and make informed health decisions. Through a seamless and inclusive ecosystem, we envision a
+            future where everyone can thrive in optimal health.
+          </p>
+        </div>
+      </div>
+      <div style="margin-left: 3%;"></div>
+      <div class="card"
+        style="background-color: rgba(240, 248, 255, 0); box-shadow: 0 0 30px rgba(0,0,0,0.5);  overflow:hidden; border-radius: 15px;">
+        <img class="card-img-top" src="static\Assets\Vision.png" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Why HealthPal?</h4>
+          <p class="card-text" style="font-weight: 500;">HealthPal offers a unique and user-centric healthcare
+            experience, prioritizing the
+            well-being of our users. Access innovative and tailored healthcare solutions, catering to your specific
+            needs. Enjoy 24/7 accessibility for reliable guidance and support. We prioritize data privacy, building
+            trust in user relationships. Embrace HealthPal for a transformative journey towards better health, powered
+            by cutting-edge technology and compassionate care.</p>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top: 7%; "></div>
+  </div>
+
+  <!-- Contact Us -->
+  <div id="ContactUs" style="background-color: rgb(245, 254, 254)">
+    <div style="padding-top: 7%;"></div>
+    <div style="width: 95vw;">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <h2>Contact Us</h2>
+          <hr style="margin-left: 46%; width: 100px; border: 2px solid #007bff;"> <!-- Blue border -->
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us
+        directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8"> <!-- Increase width of the form container -->
+          <div class="card" style="background-color: #d8f5fd; border: none; padding: 20px;">
+            <!-- Removed background-color style -->
+            <div class="card-body">
+              <h4 class="card-title text-center">Feedback Form</h4>
+              <form>
+                <div class="form-row"> <!-- Use form-row to place name and email side by side -->
+                  <div class="form-group col-md-6" style="margin-bottom: 15px;">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                  </div>
+                  <div class="form-group col-md-6" style="margin-bottom: 15px;">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                  </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                  <!-- Separate message input with its own form-group -->
+                  <label for="feedback">Message:</label>
+                  <textarea class="form-control" id="feedback" style="width: 100%;" rows="4"
+                    placeholder="Enter your feedback"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary " style="font-weight: bold;">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top: 7%;"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

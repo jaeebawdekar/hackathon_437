@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+    <style>
+        body {
+            background-image: url('static\Assets\4.png');
+            /* Background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed; width: 100%; z-index: 2; ">
+        <a class="navbar-brand" href="#" style="font-size: 28px; font-variant: small-caps;font-weight: bold;">
+            <img src="static\Assets\header_bg.jpg" alt="Healthpall Logo" width="30" height="30" class="mr-2">
+            HealthPal
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav" style="margin-left:48px;">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html#Home" style="font-size: 18px;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#Guidelines" style="font-size: 18px;">Guidelines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chatbot.html" style="font-size: 18px;">Chatbot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#AboutUs" style="font-size: 18px;">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#ContactUs" style="font-size: 18px;">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown" style="margin-left: 0px;">
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="static\Assets\profile.png" alt="Profile" width="30" height="30" class="mr-2">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="profile.html">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="index_before_login.html">Logout</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <section style="background-color: #f0baba00; padding-top: 8%;">
+
+        <div class="container py-5">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card mb-4" style="border-radius: 20px;">
+                        <div class="card-body text-center"
+                            style="box-shadow: 0 0 30px rgb(0, 0, 0);  overflow:hidden; border-radius: 20px;">
+                            <div class="profile-pic-container">
+                                <label for="profilePicInput">
+                                    <img src="static\Assets\Default image.jpg" alt="avatar"
+                                        class="rounded-circle img-fluid profile-pic" id="profilePic"
+                                        style="width: 180px; height: 180px; border-radius: 50%; border: 0.02px solid #000000;">
+                                    <p class="profile-photo-label"
+                                        style="text-align: center;    color: #ffffff;padding-bottom: -100px;">Edit
+                                        Photo</p>
+                                </label>
+                                <input type="file" id="profilePicInput" class="profile-pic-input visually-hidden"
+                                    accept="image/*">
+                            </div>
+                            <h5 class="my-3">Your Name</h5>
+                            <p class="text-muted mb-1">Additional Information</p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button type="button" class="btn btn-primary" style="margin: 10px; font-weight: bold;"
+                                    onclick="showEditProfileForm()">Edit Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 mb-lg-0" style="border-radius: 20px;">
+                        <div class="card-body p-0"
+                            style="box-shadow: 0 0 30px rgb(0, 0, 0);  overflow:hidden; border-radius: 20px;">
+                            <ul class="list-group list-group-flush rounded-3">
+                                <a href="index_before_login.html"
+                                    class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                    <span>Sign Out</span>
+                                    <i class="fas fa-sign-out-alt fa-lg text-danger"></i>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4" style="border-radius: 20px;" id="profileInfo">
+                        <div class="card-body"
+                            style="box-shadow: 0 0 30px rgb(0, 0, 0);  overflow:hidden; border-radius: 20px;">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Full Name : </p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">xyz</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Email : </p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">xyz@example.com</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Phone</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">(097) 234-5678</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Date OF Birth: </p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">dd/mm/yyyy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-13" style="width: 100%;">
+                        <div class="card mb-4" id="trackProgressSection" style="border-radius: 20px;">
+                            <div class="card-body"
+                                style="box-shadow: 0 0 30px rgb(0, 0, 0); border-radius: 20px; height: 32vh; ">
+                                <h5 class="mb-3">Track Your Progress</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Session 1
+                                        <span id="session1Stars"></span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Session 2
+                                        <span id="session2Stars"></span>
+                                    </li>
+                                    <!-- Add other items if needed -->
+                                    <!-- Add more content here, it will scroll within the fixed height container -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4" id="editProfileForm" style="display:none; border-radius: 20px;">
+                        <div class="card-body"
+                            style="box-shadow: 0 0 30px rgb(0, 0, 0); overflow:hidden; border-radius: 20px;">
+                            <div class="text-center mb-3">
+                                <h5>Edit Profile</h5>
+                                <hr style="width: 30%; margin:0 35%;">
+                            </div>
+                            <div style="height: 417px; overflow-y: auto;">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="fullName" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="fullName" value="xyz">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" value="xyz@example.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" id="phone" value="(097) 234-5678">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dob" class="form-label">Date of Birth</label>
+                                        <input type="date" class="form-control" id="dob" value="dd/mm/yyyy">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="additionalInfo">Additional Information</label>
+                                        <textarea class="form-control" id="additionalInfo" rows="4"
+                                            placeholder="Enter additional information"></textarea>
+                                    </div>
+                                    <label for="profilePicInput" class="btn btn-primary" style="margin: 10px; font-weight: bold;">Edit
+                                        Photo</label>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-success"
+                                            style="margin-bottom: 10px; background-color:#1cb214; font-weight: bold;"
+                                            onclick="saveProfileChanges()">Save Changes</button>
+                                        <button type="button" class="btn btn-secondary" onclick="cancelEditProfile()"
+                                            style="background-color: #dc3545; font-weight: bold;">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const profilePic = document.getElementById("profilePic");
+        const profilePicInput = document.getElementById("profilePicInput");
+
+        profilePicInput.addEventListener("change", function () {
+            const file = profilePicInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.addEventListener("load", function () {
+                    profilePic.setAttribute("src", reader.result);
+                });
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function hideTrackProgressSection() {
+            const trackProgressSection = document.getElementById("trackProgressSection");
+            trackProgressSection.style.display = "none";
+        }
+
+        function showEditProfileForm() {
+            document.getElementById("profileInfo").style.display = "none";
+            hideTrackProgressSection();
+            document.getElementById("editProfileForm").style.display = "block";
+        }
+
+        function cancelEditProfile() {
+            document.getElementById("profileInfo").style.display = "block";
+            document.getElementById("editProfileForm").style.display = "none";
+            document.getElementById("trackProgressSection").style.display = "block";
+        }
+
+        function saveProfileChanges() {
+            document.getElementById("profileInfo").style.display = "block";
+            document.getElementById("editProfileForm").style.display = "none";
+            document.getElementById("trackProgressSection").style.display = "block";
+        }
+        // Function to get the star rating based on the input value
+        function getStarRating(inputValue) {
+            // Assume the scale is from 1 to 5
+            const maxRating = 5;
+            // Minimum and maximum values of the input scale
+            const minValue = 1;
+            const maxValue = 5; // Since we are using a 1 to 5 scale, the max value is 5
+
+            // Calculate the rating based on the mapping between input scale and stars scale
+            const rating = Math.round((inputValue - minValue) / (maxValue - minValue) * maxRating);
+
+            // Ensure the rating is within the valid range (1 to 5)
+            return Math.min(Math.max(rating, 1), maxRating);
+        }
+
+        // Example usage of the getStarRating function for Session 1 and Session 2
+
+        // Example usage of the getStarRating function for Session 1 and Session 2
+        const session1Value = 4; // Input value for Session 1
+        const session1Stars = getStarRating(session1Value);
+
+        const session2Value = 6; // Input value for Session 2
+        const session2Stars = getStarRating(session2Value);
+
+        // Now you can use the session1Stars and session2Stars values to display the stars in the "Track Your Progress" list
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Update the stars for Session 1
+            const session1StarElement = document.getElementById("session1Stars");
+            session1StarElement.innerHTML = ""; // Clear any existing content
+
+            for (let i = 0; i < session1Stars; i++) {
+                const starIcon = document.createElement("i");
+                starIcon.classList.add("fas", "fa-star", "fa-sm", "text-warning");
+                session1StarElement.appendChild(starIcon);
+            }
+
+            // Update the stars for Session 2
+            const session2StarElement = document.getElementById("session2Stars");
+            session2StarElement.innerHTML = ""; // Clear any existing content
+
+            for (let i = 0; i < session2Stars; i++) {
+                const starIcon = document.createElement("i");
+                starIcon.classList.add("fas", "fa-star", "fa-sm", "text-warning");
+                session2StarElement.appendChild(starIcon);
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

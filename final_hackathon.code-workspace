@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/HealthPal(1)"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "hackathon2"
+	}
+}

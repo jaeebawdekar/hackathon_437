@@ -1,0 +1,70 @@
+
+  
+      .register-box {
+        background-color: #97979845;
+        backdrop-filter: blur(8px);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px; /* Increase width of the register box */
+        margin: 0 auto;
+        padding: 30px;
+      }
+  
+      .register-heading {
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+  
+      .profile-pic-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .profile-pic-input {
+        display: none; /* Hide the file input field */
+      }
+    
+      /* Additional style for the "Click To Upload" text */
+      .profile-pic-container:hover .profile-pic {
+        opacity: 0.7; /* Reduce opacity on hover */
+      }
+    
+      .profile-pic-container:hover p {
+        display: block; /* Show the "Click To Upload" text on hover */
+      }
+    
+      .profile-pic-text {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        color: #ffffff;
+      }
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #000000; /* Add red border */
+        cursor: pointer; /* Add pointer cursor on hover */
+      }
+
+      .form-check-input[type="radio"] {
+        width: 15px;
+        height: 15px;
+        /* Add default box-shadow for all radio buttons */
+      }
+  
+      /* Add glow effect for the selected radio button */
+      .form-check-input[type="radio"]:checked {
+        box-shadow: 0 0 5px 2px #276cd9;
+      }
+      .profile-pic-input {
+        display: none; /* Hide the file input field */
+      }

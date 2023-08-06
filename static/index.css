@@ -1,0 +1,52 @@
+        #first:hover {
+            box-shadow: 0 0 30px rgba(9, 9, 216, 0.689) !important;
+        }
+
+        #second:hover {
+            box-shadow: 0 0 30px rgba(9, 216, 44, 0.646) !important;
+        }
+
+        #third:hover {
+            box-shadow: 0 0 30px rgba(216, 9, 54, 0.736) !important;
+        }
+
+        #fourth:hover {
+            box-shadow: 0 0 30px rgba(232, 191, 10, 0.776) !important;
+        }
+
+        #fifth:hover {
+            box-shadow: 0 0 30px rgba(9, 9, 216, 0.5) !important;
+        }
+
+        #guidelines {
+            color: #070785;
+            text-shadow: 2px 2px 4px rgba(0, 255, 94, 0.2);
+        }
+
+        .list-group-item-action:hover {
+            transform: scale(1.02);
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        /* Contact Us section */
+    .contact-icon {
+        color: #007bff;
+      }
+
+      .card-body {
+        background-color: #d8f5fd82;
+        padding: 20px;
+      }
+
+      /* Hover effect on form submit button */
+    .btn-primary:hover {
+        background-color: #0c43d8;
+      }
+
+      
